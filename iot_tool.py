@@ -56,8 +56,17 @@ def calculate_variant_6():
 
 def calculate_variant_7():
     print("\n[Variant 7: Robot Kinematics Drive Calculation]")
-    # DEVELOPER 7: Read gear ratio i and motor RPM Nin.
-    # Output shaft Nout = Nin / i. Apply bitwise left shift Nin << 3. Manipulator link string.
+    print("1.1. Введіть, будь ласка, передаточне число i та вхідні оберти N_in") # інформаційне повідомлення
+    i = float(input("i = "))
+    N_in = float(input("N_in = "))
+    print(f"N_out = {N_in/i}")
+    N_in = int(N_in)
+    print(f"Зсув вліво: {N_in<<3}")
+
+    print("1.2. Ланка маніпулятора") # інформаційне повідомлення
+    name = input("Введіть назву: ")
+    print( name.replace('_', ' ').upper() )
+    print(f"Чи містить joint: {"joint" in name.lower()}")
     pass
 
 
