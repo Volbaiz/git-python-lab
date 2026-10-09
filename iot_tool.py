@@ -44,13 +44,26 @@ def calculate_variant_5():
     print("\n[Variant 5: Unmanned Aerial Vehicle Telemetry]")
     # DEVELOPER 5: Read altitude H and vertical speed Vz. Calculate t = H / Vz.
     # Perform bitwise XOR between H and Vz. Validate $GPGGA telemetry string, active sensors.
+
     pass
 
 
 def calculate_variant_6():
     print("\n[Variant 6: Digital Communication Protocols]")
     # DEVELOPER 6: Read I2C bus frequency in kHz (F). Period T = 1000000 / (F * 1000).
+    F = float(input('Введіть частоту шини I2C у кГц: '))
+    F = F * 1000
+    T = 1000000 / (F * 1000)
+    print(f'Період одного такту в мкс: {int(T)}')
+    print(f'Результат виконання побітової операції AND між цілочисельною частотою та числом 0x0F: {int(F) & 0x0F}')
+
     # Perform bitwise AND between frequency and 0x0F. USART_BAUDRATE string, rx buffer.
+    interfaceName = input('Введіть назву інтерфейсу (наприклад, "USART_BAUDRATE_115200"): ')
+    print(f'Довжина назви інтерфейсу: {len(interfaceName)}')
+    baudrate = interfaceName[-6:]
+    parity = baudrate == "115200"
+    print(f'Назва інтерфейсу закінчується на "115200"' if parity else 'Назва інтерфейсу не закінчується на "115200"')
+    print(f'Перші 5 символів назви інтерфейсу: {interfaceName[0:5]}')
     pass
 
 
