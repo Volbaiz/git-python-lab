@@ -29,8 +29,24 @@ def calculate_variant_2():
 def calculate_variant_3():
     print("\n[Variant 3: Battery Pack Monitoring]")
     # DEVELOPER 3: Read capacity E and power P. Calculate t = E / P.
+E=int(input("Ємність у Вт*год: "))
+P=int(input("Потужність у Вт: "))
+t=E/P
+print("Час роботи: ", t) 
+
+
     # Perform bitwise OR between integer E and P. Reverse LiFePO4 string, cell voltages.
+a=P|E
+print("Результат побітового додавання 'P' та 'E': ", a)
+
+b=input("Тип акумуляторної батареї: ")
+rev_b=b[::-1]
+print("Реверс типу акумулятора: ", rev_b)
+
+U=[3,5,8,2]
+print("Список напруг: ", U)
     pass
+
 
 
 def calculate_variant_4():
