@@ -96,7 +96,7 @@ def calculate_variant_7():
     name = input("Введіть назву: ")
     print( name.replace('_', ' ').upper() )
     print(f"Чи містить joint: {"joint" in name.lower()}")
-    
+    pass
 
 
 def calculate_variant_8():
@@ -121,7 +121,7 @@ def calculate_variant_10():
     ay=int(input("Y projection of acceleration\n"))
     az=int(input("Z projection of acceleration\n"))
     a=(ax**2+ay**2+az**2)**0.5
-    print(a)
+    print(bin(int(a)))
     print(bin(int(az)>>2))
 
 
