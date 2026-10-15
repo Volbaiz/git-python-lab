@@ -71,7 +71,6 @@ def calculate_variant_6():
     F = F * 1000
     T = 1000000 / (F * 1000)
     print(f'Період одного такту в мкс: {int(T)}')
-    print(f'Період одного такту в мкс в бінарній системі: {bin(int(T))}')
     print(f'Результат виконання побітової операції AND між цілочисельною частотою та числом 0x0F: {int(F) & 0x0F}')
 
     # Perform bitwise AND between frequency and 0x0F. USART_BAUDRATE string, rx buffer.
