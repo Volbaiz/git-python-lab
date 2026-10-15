@@ -89,9 +89,9 @@ def calculate_variant_7():
     print("1.1. Введіть, будь ласка, передаточне число i та вхідні оберти N_in") # інформаційне повідомлення
     i = float(input("i = "))
     N_in = float(input("N_in = "))
-    print(f"N_out = {N_in/i}, bin {bin(int(N_in/i))}")
+    print(f"N_out = {N_in/i}, в двійковій системі {bin(int(N_in/i))}")
     N_in = int(N_in)
-    print(f"Зсув вліво: {N_in<<3}, bin {bin(N_in<<3)}")
+    print(f"Зсув вліво: {N_in<<3}, в двійковій системі {bin(N_in<<3)}")
 
     print("1.2. Ланка маніпулятора") # інформаційне повідомлення
     name = input("Введіть назву: ")
