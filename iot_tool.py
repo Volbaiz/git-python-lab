@@ -117,7 +117,12 @@ def calculate_variant_10():
     print("\n[Variant 10: Orientation and Navigation Systems (IMU)]")
     # DEVELOPER 10: Read Ax, Ay, Az. Total acceleration A = sqrt(Ax^2 + Ay^2 + Az^2).
     # Apply bitwise right shift Az >> 2. Raw data ACC:X=... string, Euler angles.
-    pass
+    ax=int(input("X projection of acceleration\n"))
+    ay=int(input("Y projection of acceleration\n"))
+    az=int(input("Z projection of acceleration\n"))
+    a=(ax**2+ay**2+az**2)**0.5
+    print(bin(int(a)))
+    print(bin(int(az)>>2))
 
 
 def calculate_variant_11():
