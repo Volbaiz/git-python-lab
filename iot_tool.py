@@ -33,6 +33,8 @@ def calculate_variant_3():
     P=int(input("Потужність у Вт: "))
     t=E/P
     print(f"Час роботи в бінарній системі: {bin(int(t))}")
+   
+
 
 
     # Perform bitwise OR between integer E and P. Reverse LiFePO4 string, cell voltages.
@@ -71,15 +73,18 @@ def calculate_variant_6():
     F = F * 1000
     T = 1000000 / (F * 1000)
     print(f'Період одного такту в мкс: {int(T)}')
+    print(f'Період одного такту в мкс в бінарній системі: {bin(int(T))}')
     print(f'Результат виконання побітової операції AND між цілочисельною частотою та числом 0x0F: {int(F) & 0x0F}')
 
     # Perform bitwise AND between frequency and 0x0F. USART_BAUDRATE string, rx buffer.
     interfaceName = input('Введіть назву інтерфейсу (наприклад, "USART_BAUDRATE_115200"): ')
     print(f'Довжина назви інтерфейсу: {len(interfaceName)}')
+    print(f'Довжина назви інтерфейсу в бінарній системі: {bin(len(interfaceName))}')
     baudrate = interfaceName[-6:]
     parity = baudrate == "115200"
     print(f'Назва інтерфейсу закінчується на "115200"' if parity else 'Назва інтерфейсу не закінчується на "115200"')
     print(f'Перші 5 символів назви інтерфейсу: {interfaceName[0:5]}')
+    print(f'^________+________^')
     pass
 
 
@@ -88,9 +93,9 @@ def calculate_variant_7():
     print("1.1. Введіть, будь ласка, передаточне число i та вхідні оберти N_in") # інформаційне повідомлення
     i = float(input("i = "))
     N_in = float(input("N_in = "))
-    print(f"N_out = {N_in/i}")
+    print(f"N_out = {N_in/i}, в двійковій системі {bin(int(N_in/i))}")
     N_in = int(N_in)
-    print(f"Зсув вліво: {N_in<<3}")
+    print(f"Зсув вліво: {N_in<<3}, в двійковій системі {bin(N_in<<3)}")
 
     print("1.2. Ланка маніпулятора") # інформаційне повідомлення
     name = input("Введіть назву: ")
@@ -117,7 +122,12 @@ def calculate_variant_10():
     print("\n[Variant 10: Orientation and Navigation Systems (IMU)]")
     # DEVELOPER 10: Read Ax, Ay, Az. Total acceleration A = sqrt(Ax^2 + Ay^2 + Az^2).
     # Apply bitwise right shift Az >> 2. Raw data ACC:X=... string, Euler angles.
-    pass
+    ax=int(input("X projection of acceleration\n"))
+    ay=int(input("Y projection of acceleration\n"))
+    az=int(input("Z projection of acceleration\n"))
+    a=(ax**2+ay**2+az**2)**0.5
+    print(bin(int(a)))
+    print(bin(int(az)>>2))
 
 
 def calculate_variant_11():
