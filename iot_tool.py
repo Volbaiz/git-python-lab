@@ -82,7 +82,7 @@ def calculate_variant_6():
     parity = baudrate == "115200"
     print(f'Назва інтерфейсу закінчується на "115200"' if parity else 'Назва інтерфейсу не закінчується на "115200"')
     print(f'Перші 5 символів назви інтерфейсу: {interfaceName[0:5]}')
-    print(f'^_____^')
+    print(f'^_________________^')
     pass
 
 
