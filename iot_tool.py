@@ -29,8 +29,8 @@ def calculate_variant_2():
 def calculate_variant_3():
     print("\n[Variant 3: Battery Pack Monitoring]")
     # DEVELOPER 3: Read capacity E and power P. Calculate t = E / P.
-    E=int(input("Ємність у Вт*год: "))
-    P=int(input("Потужність у Вт: "))
+    E=float(input("Ємність у Вт*год: "))
+    P=float(input("Потужність у Вт: "))
     t=E/P
     print("Час роботи: ", t)
     print(f"Час роботи у двійковому форматі: {bin(int(t))}", )
