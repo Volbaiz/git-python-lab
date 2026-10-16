@@ -31,8 +31,10 @@ def calculate_variant_3():
     # DEVELOPER 3: Read capacity E and power P. Calculate t = E / P.
     E=int(input("Ємність у Вт*год: "))
     P=int(input("Потужність у Вт: "))
-    t=round(E/P , 3)
-    print("Час роботи: ", t) 
+    t=E/P
+    print(f"Час роботи в бінарній системі: {bin(int(t))}")
+   
+
 
 
     # Perform bitwise OR between integer E and P. Reverse LiFePO4 string, cell voltages.
@@ -155,16 +157,18 @@ def calculate_variant_13():
 if __name__ == "__main__":
     print_banner()
     
-    # calculate_variant_1()
-    # calculate_variant_2()
-    # calculate_variant_3()
-    # calculate_variant_4()
-    # calculate_variant_5()
-    # calculate_variant_6()
-    # calculate_variant_7()
-    # calculate_variant_8()
-    # calculate_variant_9()
-    # calculate_variant_10()
-    # calculate_variant_11()
-    # calculate_variant_12()
-    # calculate_variant_13()
+    calculate_variant_1()
+    calculate_variant_2()
+    calculate_variant_3()
+    calculate_variant_4()
+    calculate_variant_5()
+    calculate_variant_6()
+    calculate_variant_7()
+    calculate_variant_8()
+    calculate_variant_9()
+    calculate_variant_10()
+    calculate_variant_11()
+    calculate_variant_12()
+    calculate_variant_13()
+
+
