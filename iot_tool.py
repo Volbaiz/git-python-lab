@@ -32,15 +32,13 @@ def calculate_variant_3():
     E=int(input("Ємність у Вт*год: "))
     P=int(input("Потужність у Вт: "))
     t=E/P
-    print(f"Час роботи в бінарній системі: {bin(int(t))}")
-   
-
-
+    print("Час роботи: ", t)
+    print(f"Час роботи у двійковому форматі: {bin(int(t))}", )
 
     # Perform bitwise OR between integer E and P. Reverse LiFePO4 string, cell voltages.
-    a=P|E
+    a=int(P)|int(E)
     print("Результат побітового додавання 'P' та 'E': ", a)
-
+    print("Результат побітового додавання 'P' та 'E' у двійковому форматі: ", bin(int(a)))
     b=input("Тип акумуляторної батареї: ")
     rev_b=b[::-1]
     print("Реверс типу акумулятора: ", rev_b)
