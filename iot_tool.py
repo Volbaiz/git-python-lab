@@ -77,6 +77,7 @@ def calculate_variant_6():
     # Perform bitwise AND between frequency and 0x0F. USART_BAUDRATE string, rx buffer.
     interfaceName = input('Введіть назву інтерфейсу (наприклад, "USART_BAUDRATE_115200"): ')
     print(f'Довжина назви інтерфейсу: {len(interfaceName)}')
+    print(f'Довжина назви інтерфейсу в бінарній системі: {bin(len(interfaceName))}')
     baudrate = interfaceName[-6:]
     parity = baudrate == "115200"
     print(f'Назва інтерфейсу закінчується на "115200"' if parity else 'Назва інтерфейсу не закінчується на "115200"')
