@@ -17,6 +17,8 @@ angle_of_attack = float(input("Enter the angle of attack "))
 print(stall_warning(angle_of_attack))
 
 
+
+
 onboard_sensors = {
     'sensor': input("Enter the sensor name "), 
     'value': float(input("Enter the sensor\'s value ")), 
@@ -33,3 +35,18 @@ def process_sensor_response(response: dict) -> str:
             return "Політ штатний"
 
 print(process_sensor_response(onboard_sensors))
+
+
+
+
+
+data_of_temperatures = [12, 32, 45, 45, 0, 0, 0, 6, 5, 5.6, 5.6, 6]
+def remove_consecutive_duplicates(data: list) -> list:
+    final_data = []
+    for i in data:
+        if final_data and i == final_data[-1]:
+            continue
+        final_data.append(i)
+    return final_data
+        
+print(remove_consecutive_duplicates(data_of_temperatures))  
