@@ -50,3 +50,20 @@ def remove_consecutive_duplicates(data: list) -> list:
     return final_data
         
 print(remove_consecutive_duplicates(data_of_temperatures))  
+
+
+
+
+data_of_G_forces = [12, 32, 45, 45, 0, 0, 0, 45.5, 5, 5.6, 5.6, 6]
+
+def find_max_overload(g_list: list) -> tuple:
+    max_g = g_list[0]
+    max_time = 0
+
+    for (time, i) in enumerate(g_list):
+        if max_g < i:
+            max_g = i
+            max_time = time
+    return(max_time, max_g)
+
+print(find_max_overload(data_of_G_forces))
